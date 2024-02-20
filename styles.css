@@ -1,12 +1,56 @@
 
-.header {
-    background-color: blue;
-    height: 10px;
-}
-.h1 {
-    background-color: red;
+header {
+    background-color: #333;
+    padding: 20px;
+    margin: 0;
 }
 
-h1 {
-    background-color: red;
+div {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    background-color: gainsboro;
+}
+
+div th {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+main{
+    display: flex;
+}
+
+/* what is containeer?*/
+main section about-us {
+    display: flex;
+    align-content: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+shop-now { /*this isnt working*/
+    display: flex;
+    background-color: #4CAF50;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 4px; 
+}
+
+customer-reviews {
+    display: flex;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+footer{
+    background-color: #333;
+    padding: 10px;
+    margin: 0;
+    color: white; 
 }
