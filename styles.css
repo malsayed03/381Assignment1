@@ -9,7 +9,7 @@ div {
     display: flex;
     justify-content: space-around;
     width: 100%;
-    background-color: gainsboro;
+    background-color: #333;
 }
 
 div th {
@@ -21,6 +21,7 @@ div th {
 }
 
 /* what is containeer?*/
+/* okay so a .blah means its the class name, like class="blah"*/
 .about-us {
     display: flex;
     align-content: center;
