@@ -20,12 +20,8 @@ div th {
 
 }
 
-main{
-    display: flex;
-}
-
 /* what is containeer?*/
-main section about-us {
+.about-us {
     display: flex;
     align-content: center;
     background-color: #ddd;
@@ -33,7 +29,7 @@ main section about-us {
     margin: 20px;
 }
 
-shop-now { /*this isnt working*/
+.shop-now button { /*this isnt working*/
     display: flex;
     background-color: #4CAF50;
     padding: 10px;
@@ -41,7 +37,7 @@ shop-now { /*this isnt working*/
     border-radius: 4px; 
 }
 
-customer-reviews {
+.customer-reviews {
     display: flex;
     background-color: #ddd;
     padding: 20px;
