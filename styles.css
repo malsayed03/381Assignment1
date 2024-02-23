@@ -3,7 +3,10 @@ header {
     background-color: #333;
     padding: 20px;
     margin: 0;
+    color: white;
 }
+
+
 
 div {
     display: flex;
@@ -43,6 +46,7 @@ div th {
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
+    flex-direction: column;
 }
 
 footer{
