@@ -1,29 +1,33 @@
 
 header {
+    display:flex;
     background-color: #333;
     padding: 20px;
     margin: 0;
     color: white;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 
 
-
-div {
+/*navigation*/
+.navigation {
     display: flex;
-    justify-content: space-around;
     width: 100%;
     background-color: #333;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
-div th {
+.navigation th {
     padding-right: 20px;
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+} /* end navigation*/
 
-}
-
-/* what is containeer?*/
+/* what is container?*/
 /* okay so a .blah means its the class name, like class="blah"*/
 .about-us {
     display: flex;
@@ -33,7 +37,7 @@ div th {
     margin: 20px;
 }
 
-.shop-now button { /*this isnt working*/
+.shop-now button { /*!!!!!!!!this isnt working*/
     display: flex;
     background-color: #4CAF50;
     padding: 10px;
@@ -55,3 +59,55 @@ footer{
     margin: 0;
     color: white; 
 }
+
+/* login form section*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-content: center; /*Vertically center items*/
+    justify-content: center; /*Horizontally center items*/
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    align-items: baseline; /*makes the stuff Left like in pic*/
+    flex-wrap: wrap;
+}
+
+form label{
+    display:block;
+    margin: 10px;
+}
+
+form input{
+    margin: 10px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+form button {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    opacity: 0.5;
+    align-self: flex-end;
+} /* !!!! the button needs to be on the same line as password input somehow*/
+
+form button:hover{
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
+form a{
+   color: #007BFF;
+   margin: 10px; 
+   text-decoration: none;
+}
+
+form a:hover{
+    text-decoration: underline;
+}
+
