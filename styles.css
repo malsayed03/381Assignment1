@@ -38,7 +38,7 @@ header {
     flex-direction: column;
 }
 
-.shop-now button { /*!!!!!!!!this isnt working*/
+.shop-now button {
     display: flex;
     background-color: #4CAF50;
     padding: 10px;
@@ -113,3 +113,30 @@ form a:hover{
     text-decoration: underline;
 }
 
+/*Contact section*/
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-content: center; /*Vertically center items*/
+    justify-content: center; /*Horizontally center items*/
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.contact-method {
+    background-color: #ddd;
+    padding:0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+
+.contact-method a{
+    color: black;
+}
+
+.contact-method a:hover{
+    color: #007BFF;
+}
