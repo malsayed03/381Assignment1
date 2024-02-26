@@ -27,7 +27,6 @@ header {
     padding-bottom: 10px;
 } /* end navigation*/
 
-/* what is container?*/
 /* okay so a .blah means its the class name, like class="blah"*/
 .about-us {
     display: flex;
@@ -43,7 +42,8 @@ header {
     background-color: #4CAF50;
     padding: 10px;
     margin: 20px;
-    border-radius: 8px; 
+    border-radius: 8px;
+    border:none; 
 }
 
 .customer-reviews {
@@ -64,7 +64,7 @@ footer{
 
 /* login form section*/
 
-form {
+.login {
     display: flex;
     flex-direction: column;
     align-content: center; /*Vertically center items*/
@@ -77,39 +77,40 @@ form {
     flex-wrap: wrap;
 }
 
-form label{
+.login label{
     display:block;
     margin: 10px;
 }
 
-form input{
+.login input{
     margin: 10px;
     background-color: #fff;
     padding: 10px;
     border-radius: 5px;
   }
 
-form button {
+.login button {
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 5px;
     margin: 10px;
     opacity: 0.5;
-    align-self: flex-end;
-} /* !!!! the button needs to be on the same line as password input somehow*/
+    border:none;
+    text-align: center;
+}
 
-form button:hover{
+.login button:hover{
     background-color: #45A049;
     opacity: 1.0;
 }
 
-form a{
+.login a{
    color: #007BFF;
    margin: 10px; 
    text-decoration: none;
 }
 
-form a:hover{
+.login a:hover{
     text-decoration: underline;
 }
 
@@ -139,4 +140,69 @@ form a:hover{
 
 .contact-method a:hover{
     color: #007BFF;
+}
+
+/*Product section*/
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    justify-content: center;
+}
+
+.box{
+    display: flex;
+    width: 40%; /*somehow this makes it 2 per line? 
+    idk if this is better than doing a table tho*/
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    flex-direction: column;
+}
+
+.box img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    height:300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.box h3{
+    max-width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+}
+.box p{
+    color: #007BFF;
+    font-weight: bold;
+    text-align: center;
+}
+
+.box:hover{
+    background-color: white;
+}
+
+.box button{
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    color: white;
+    border:none;
+    align-items: center;
+}
+
+.box button:hover{
+    background-color: #45A049;
 }
