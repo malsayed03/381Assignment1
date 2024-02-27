@@ -25,7 +25,12 @@ header {
     padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
-} /* end navigation*/
+} 
+.navigation a{
+    color: white;
+    text-decoration: none;
+}
+/* end navigation*/
 
 /* okay so a .blah means its the class name, like class="blah"*/
 .about-us {
@@ -43,7 +48,12 @@ header {
     padding: 10px;
     margin: 20px;
     border-radius: 8px;
-    border:none; 
+    border:none;
+}
+
+.shop-now button a {
+    color: white;
+    text-decoration: none;
 }
 
 .customer-reviews {
@@ -97,6 +107,7 @@ footer{
     opacity: 0.5;
     border:none;
     text-align: center;
+    color: white;
 }
 
 .login button:hover{
