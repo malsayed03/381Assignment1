@@ -1,0 +1,65 @@
+<!-- login.html -->
+<!-- Requirements: login page, include form w/ fields for username and password -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name= "viewport" content="width=device-width, initial-scale = 1"> <!-- Allows for viewing on different screen sizes-->
+  <!--meta name="keywords" content="HTML, Web Development, Examples"-->
+  <!--meta name="description" content="Insert description here"-->
+  <meta name="author" content="Zaira Ramji and Maryam Alsayed">
+  <link rel="shortcut icon" href="potionfavicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <title> Alikseer Sign Up </title>
+</head>
+<body>
+    <header>
+        <!-- Logo and website name go here -->
+      	 <img src="mainlogo.png" alt="logo" height="100">
+         <h1> Alikseer </h1>
+    </header>
+
+    <div class = "navigation">
+        <!-- Navigation links go here -->
+        <table>
+          <tr>
+              <th><a href= "index.html">Home</a></th>
+              <th><a href= "products.html">Products</a></th>
+              <th><a href= "contact.html">Contact Us</a></th>
+              <th><a href= "login.html">Log In</a></th>
+          </tr>
+
+      </table>
+    </div>
+
+    <main class="signup">
+        <!-- Place for login form, including username, password, & login button (nonfunctional) -->
+        <!-- Password should be masked; also include signup link for new users (nonfunctional hyperlink) -->
+      <form>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username">
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter password">
+
+        <label for="password">Confirm Password:</label>
+        <input type="password" id="password" name="password" placeholder="Confirm password">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter email">
+
+        <button type="signup">Sign Up</button>
+
+      </form>
+      
+    </main>
+
+    <footer>
+        <!-- Copyright notice -->
+        <p>&copy Copyright 2024 Alikseer</p>
+    </footer>
+
+</body>
+</html>
