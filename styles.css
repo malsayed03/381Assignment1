@@ -237,7 +237,7 @@ footer{
     background-color: #fff;
     padding: 10px;
     border-radius: 5px; 
-    /*make sure all fields have a required attribute*/
+    /*make sure all fields have a required attribute - i did this in html doc, idk if thats proper tho*/
   }
 
   .signup button {
