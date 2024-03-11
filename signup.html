@@ -39,11 +39,19 @@
       <form>
 
         <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="Enter username" required>
+        <input type="text" id="username" name="username" placeholder="Enter username" 
+        required
+        pattern="[a-zA-Z][\w\-]{2,19}" 
+        title="Username must start with a letter. Must be between 3-20 characters. Can only include letters, numbers, hyphens, or underscores."
+        >
         <br>
 
         <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <input type="password" id="password" name="password" placeholder="Enter password" 
+        required
+        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*-_=+;:'&quot,.&lt&gt?`~\(\[\{\)\]\}\|\/]).{8,}"
+        title="Password must have at least 8 characters. Must include at least one uppercase letter, one lowercase letter, and one special character. No spaces.">
+        <!-- ?=.* means include at least one of whatever specified.-->
         <br>
 
         <label for="confirmP">Confirm Password:</label><br>
@@ -51,7 +59,7 @@
         <br>
 
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter email" required>
+        <input type="email" id="email" name="email" placeholder="Enter email" requi-red>
 
         <button type="signup">Sign Up</button>
 

@@ -255,3 +255,14 @@ footer{
     background-color: #45A049;
     opacity: 1.0;
 }
+
+#message-box {
+    border: 20px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    border-color: red;
+}
+#message {
+    color: red;
+}
