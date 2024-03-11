@@ -1,4 +1,3 @@
-if(window.location.href === 'login.html'){
 document.addEventListener('DOMContentLoaded', function() {
     const loginForm = document.getElementById('login');
     const messageBox = document.getElementById('message-box');
@@ -37,9 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function showMessage(message) {
         messageParagraph.textContent = message;
+        messageBox.style.display = 'block'; // Show the message box
     }
 });
-}
 
 
 
@@ -51,3 +50,4 @@ function check(input) {
         input.setCustomValidity('');
     }
 }
+

@@ -257,12 +257,13 @@ footer{
 }
 
 #message-box {
-    border: 20px;
+    border: 2px solid black;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
-    border-color: red;
+    .border-color: black;
+    display: none;
 }
-#message {
-    color: red;
+#message{
+    border: 1px;
 }
