@@ -40,7 +40,7 @@
 
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="Enter username" 
-        required
+        requi-red
         pattern="[a-zA-Z][\w\-]{2,19}" 
         title="Username must start with a letter. Must be between 3-20 characters. Can only include letters, numbers, hyphens, or underscores."
         >
@@ -48,18 +48,22 @@
 
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" placeholder="Enter password" 
-        required
+        requi-red
         pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*-_=+;:'&quot,.&lt&gt?`~\(\[\{\)\]\}\|\/]).{8,}"
-        title="Password must have at least 8 characters. Must include at least one uppercase letter, one lowercase letter, and one special character. No spaces.">
+        title="Password must have at least 8 characters. Must include at least one uppercase letter, one lowercase letter, and one special character. No spaces."
+        >
         <!-- ?=.* means include at least one of whatever specified.-->
         <br>
 
         <label for="confirmP">Confirm Password:</label><br>
-        <input type="confirmP" id="confirmP" name="confirmP" placeholder="Confirm password" required>
+        <input type="password" id="confirmP" name="confirmP" placeholder="Confirm password" 
+        requi-red
+        oninput="check(this)">
         <br>
 
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter email" requi-red>
+        <input type="email" id="email" name="email" placeholder="Enter email" required
+        pattern="[\w\-.]+@[\w\-.]+\.[a-zA-Z]{2,4}">
 
         <button type="signup">Sign Up</button>
 

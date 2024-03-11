@@ -41,14 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 }
 
-if(window.location.href === 'signup.html'){
-    function check() {
-        var input = document.getElementById('confirmP');
-        if (input.value != document.getElementById('password').value) {
-            input.setCustomValidity('Password Must be Matching.');
-        } else {
-            // input is valid -- reset the error message
-            input.setCustomValidity('');
-        }
+
+
+function check(input) {
+    if (document.getElementById('confirmP').value != document.getElementById('password').value) {
+        input.setCustomValidity('Password Must be Matching.');
+    } else {
+        // input is valid -- reset the error message
+        input.setCustomValidity('');
     }
 }
