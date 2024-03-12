@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const signupPage = document.getElementById('signupPage');
     if(signupPage){
         const signup = document.getElementById('signup');
-        const messageBox = document.getElementById('message-box');
+        const messageBox = document.getElementById('message-box-s');
 
         signup.addEventListener('submit', function(event){
             event.preventDefault();
@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const confirmPassword = document.getElementById('confirmP');
             const email = document.getElementById('email');
 
+            let errorMessages = '';
+
             console.log('Username:', username.value);
             console.log('Password:', password.value);
             console.log('Confirm Password:', confirmP.value);
@@ -67,46 +69,46 @@ document.addEventListener('DOMContentLoaded', function() {
             //Username validation
             const usernamePattern = /^[a-zA-Z][\w-]{2,19}$/;
             if (!usernamePattern.test(username.value)){
-                showMessage('Invalid username. Username must start with a letter. Must be between 3-20 characters. Can only include letters, numbers, hyphens, or underscores.')
-                return;
+                errorMessages+='Invalid username. <br>Username must start with a letter. Must be between 3-20 characters. Can only include letters, numbers, hyphens, or underscores.<br><br>';
+                console.log('bp1');
+                console.log(errorMessages);
             }
-            
+
 
             //Password validation
-            // const password = password.value;
-            // const confirmPassword = confirmP.value;
-            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()-_=+[\]{}|;:'",.<>?/`~]).{8,}$/;
-            // [!@#$%^&*-_=+;:'&quot,.&lt&gt?`~\(\[\{\)\]\}\|\/]
-            if (!passwordPattern.test(password)) {
-                console.log('Password:', password.value);
-                console.log('Pattern Test Result:', passwordPattern.test(password.value));
-                showMessage('Invalid password. Password must have at least 8 characters. Must include at least one uppercase letter, one lowercase letter, and one special character. No spaces.')
-                return;
+            const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()\[\]{}|;:'",.<>?\/`~_-]).{8,}$/;
+            // [!@#$%^&*-_=+;:'&quot,.&lt&gt?`~\(\[\{\)\]\}\|\/], !@#$%^&*()-_=+[\]{}|;:'",.<>?/`~]
+            if (!passwordPattern.test(password.value)) {
+                errorMessages+='Invalid password.<br><br>';
             }
-            
+
             //Confirm password
-            if(password !== confirmPassword){
-                console.log('no match')
-                showMessage('Passwords do not match.');
-                return;
+            if(password.value !== confirmPassword.value){
+                errorMessages+='Passwords do not match.<br><br>';
             }
+
+
 
             //Email validation
-            const emailPattern = /^[\s@]+@[^\s@]+\.[^\s@]+$/;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(email.value)) {
-                showMessage('Invalid email address');
-                return;
+                errorMessages+='Invalid email address<br>';
             }
 
-            //After all that^, if they all pass:
-            showMessage('Sign up successful :)');
+
+            if(errorMessages !== ''){
+                showMessage(errorMessages);
+            } else {
+                showMessage('Sign up successful :)');
+            }
         }); 
 
-        function showMessage(message, color= 'black'){
-            messageBox.textContent = message;
+        function showMessage(message, color= 'black'){ 
+            messageBox.innerHTML = message;
             messageBox.style.color = color;
             messageBox.style.display = 'block';
         }
+
     }
 
 

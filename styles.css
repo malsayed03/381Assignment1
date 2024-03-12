@@ -236,7 +236,6 @@ footer{
     background-color: #fff;
     padding: 10px;
     border-radius: 5px; 
-    /*make sure all fields have a required attribute - i did this in html doc, idk if thats proper tho*/
   }
 
 .signup button {
@@ -266,3 +265,10 @@ footer{
     border: 1px;
 }
 
+#message-box-s {
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+    display: none;
+}
