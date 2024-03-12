@@ -154,7 +154,7 @@ footer{
 
 /*Product section*/
 
-.container{
+.products-container{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -203,7 +203,7 @@ footer{
     background-color: white;
 }
 
-.box button{
+.add-to-cart{
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 5px;
@@ -213,9 +213,56 @@ footer{
     align-items: center;
 }
 
-.box button:hover{
+.add-to-cart:hover{
     background-color: #45A049;
 }
+
+.cart-container {
+    text-align: center;
+}
+
+.cart-header {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.cart-items {
+    display: inline-block;
+}
+
+.cart-item {
+    text-align: center;
+}
+
+.cart-item-name {
+    font-weight: normal;
+    color: green;
+    display: inline;
+    margin-right: 10px;
+}
+
+.cart-item-price {
+    font-weight: normal;
+    display: inline;
+    margin-right: 10px;
+}
+
+.cart-item-quantity {
+    font-weight: normal;
+    display: inline;
+    margin-right: 10px;
+}
+
+.shop-button {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.shop-button:hover {
+    background-color: #ff0000;
+}
+
+
 
 /*Sign up section*/
 
