@@ -10,10 +10,10 @@
     <meta name="author" content="Zaira Ramji and Maryam Alsayed">
     <link rel="shortcut icon" href="potionfavicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
-    <script src="javascript.js"></script>
+
     <title> Alikseer Products </title>
 </head>
-<body>
+<body productPage>
     <header>
         <img src="mainlogo.png" alt="logo" height="100">
         <h1> Alikseer </h1>
@@ -33,80 +33,142 @@
     </div>
 
     <main>
-        <div class="container">
+        <div class="products-container">
 
-            <div class="box">
+            <div class="box" id="1" product-index = "1">
                 <img src="product_photos/red.jpg" alt="A red liquid in a bottle">
                 <!--Photo by RDNE Stock project from Pexels: https://www.pexels.com/photo/close-up-shot-of-a-potion-7979099/-->
                 <h3>Bone Regrowing Potion</h3>
                 <p>$50.00 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
 
             </div>
 
-            <div class="box">
+            <div class="box" id="2" product-index = "2">
                 <img src="product_photos/purple.jpg" alt="A purple liquid in a bottle">
                 <!--Photo by RDNE Stock project from Pexels: https://www.pexels.com/photo/close-up-shot-of-a-potion-7978810/-->
                 <h3>Ultra Super Bone Regrowing Potion</h3>
                 <p>$100.00 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="3" product-index = "3">
                 <img src="product_photos/green.jpg" alt="A green liquid in a bottle" >
                 <!--Photo by RDNE Stock project from Pexels: https://www.pexels.com/photo/close-up-shot-of-a-potion-7978810/-->
                 <h3>Potion of Night Vision</h3>
                 <p>$34.99 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="4" product-index = "4">
                 <img src="product_photos/aqua.jpg" alt="An aqua liquid in a bottle">
                 <!--Photo by RDNE Stock project from Pexels: https://www.pexels.com/photo/close-up-shot-of-a-potion-7978810/-->
                 <h3>Pass All Your Classes Potion</h3>
                 <p>$21.75 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="5" product-index = "5">
                 <img src="product_photos/potion5.jpg" alt="Potion5">
                 <!-- potion 5 photo: https://newyorkscent.com/oud-bergamot-jo-malone-type-fragrance-oil/-->
                 <h3>Horse Potion</h3>
                 <p>$15.00 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="6" product-index = "6">
                 <img src="product_photos/potion6.jpg" alt="Potion6">
                 <!-- potion 6 photo: https://www.parfumo.com/Perfumes/surrati/Khayal-->
                 <h3>Elixir of Lies</h3>
                 <p>$44.50 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="7" product-index = "7">
                 <img src="product_photos/potion7.jpg" alt="Potion7">
                 <!-- potion 7 photo: https://www.etsy.com/ca/listing/1209749967/vintage-czech-handmade-rhinestone-glass-->
                 <h3>Draught of Moonlight</h3>
                 <p>$32.00 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="box">
+            <div class="box" id="8" product-index = "8">
                <img src="product_photos/potion8.jpg" alt="Potion8">
                 <!-- potion 8 photo: https://www.ebay.ca/itm/385169987212-->
                 <h3>I'm so tired, please, Potion</h3>
                 <p>$12.99 CAD</p>
-                <button>Add to Cart</button>
+                <button class="add-to-cart">Add to Cart</button>
             </div>
 
-            <div class="cart">
-                <h1>Shopping Cart</h1><br>
-                <p> huh</p>
-            </div>
         </div>
 
     </main>
+    <script>
+        var main = document.getElementsByTagName("main");
+        var cartDiv = document.createElement("div");
+        cartDiv.classList.add("cart-container");
+        var cartHeader = document.createElement("h3");
+        cartHeader.innerHTML = "Shopping Cart";
+        var cartItems = document.createElement("div");
+        cartItems.setAttribute("id", "cart-items");
+        cartDiv.appendChild(cartHeader);
+        cartDiv.appendChild(cartItems);
+        main[0].appendChild(cartDiv);
+
+        let inCart = {};
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', function() {
+            const productDiv = button.closest('div');
+            const productId = productDiv.getAttribute("product-index")
+            console.log(productId)
+            const productName = productDiv.querySelector('h3').textContent;
+            console.log(productName)
+            const productPrice = productDiv.querySelector('p').textContent;
+            console.log(productPrice)
+            if (inCart[productId]) {
+                inCart[productId].quantity += 1;
+            } else {
+                inCart[productId] = {
+                name: productName,
+                price: productPrice,
+                quantity: 1
+                }; 
+                
+            }
+            updateCart();
+            alert(`${productName} has been added to the cart.`)
+            });
+        });
+       function updateCart() {
+        cart = document.getElementById("cart-items");
+        cart.innerHTML = "";
+        for (productId in inCart) {
+            var productDiv = document.createElement("div");
+            var index = productId;
+            console.log(inCart[productId]);
+            productDiv.setAttribute("cart-id", index);
+            console.log(inCart[productId].name);
+            productDiv.innerHTML = `
+                <div class="product-container">
+                    <p class="product-name">${inCart[productId].name} - </p>
+                    <p class="product-price">${inCart[productId].price} - </p>
+                    <p class="product-quantity">x${inCart[productId].quantity}</p>
+                    <button class="remove" onclick="cartRemove(${productId})">Remove</button>
+                </div>`;
+            cart.appendChild(productDiv);
+            }
+        }
+
+
+       function cartRemove(productId){
+        console.log(productId)
+            inCart[productId].quantity--;
+            if(inCart[productId].quantity == 0){
+                delete inCart[productId];
+            }
+
+       }
+    </script>
 
     <footer>
         <!-- Copyright notice goes here -->

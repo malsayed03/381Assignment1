@@ -110,18 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
     }
+    //############
 
+    
+    
 
+    
 });
-
-
-// function check(input) {
-//     if (document.getElementById('confirmP').value != document.getElementById('password').value) {
-//         input.setCustomValidity('Password Must be Matching.');
-//     } else {
-//         // input is valid -- reset the error message
-//         input.setCustomValidity('');
-//     }
-// }
 
 
