@@ -10,7 +10,6 @@ header {
     align-items: center;
 }
 
-
 /*navigation*/
 .navigation {
     display: flex;
@@ -240,7 +239,7 @@ footer{
     /*make sure all fields have a required attribute - i did this in html doc, idk if thats proper tho*/
   }
 
-  .signup button {
+.signup button {
     background-color: #4CAF50;
     padding: 10px;
     border-radius: 5px;
@@ -266,3 +265,4 @@ footer{
 #message{
     border: 1px;
 }
+

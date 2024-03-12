@@ -10,10 +10,9 @@
   <meta name="author" content="Zaira Ramji and Maryam Alsayed">
   <link rel="shortcut icon" href="potionfavicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js"></script>
   <title> Alikseer Sign Up </title>
 </head>
-<body>
+<body id="signupPage">
     <header>
         <!-- Logo and website name go here -->
       	 <img src="mainlogo.png" alt="logo" height="100">
@@ -33,37 +32,29 @@
       </table>
     </div>
 
-    <main class="signup">
+    <main class="signup" id="signup">
         <!-- Place for login form, including username, password, & login button (nonfunctional) -->
         <!-- Password should be masked; also include signup link for new users (nonfunctional hyperlink) -->
       <form>
 
         <label for="username">Username:</label><br>
         <input type="text" id="username" name="username" placeholder="Enter username" 
-        requi-red
-        pattern="[a-zA-Z][\w\-]{2,19}" 
-        title="Username must start with a letter. Must be between 3-20 characters. Can only include letters, numbers, hyphens, or underscores."
-        >
+        required>
         <br>
 
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" placeholder="Enter password" 
-        requi-red
-        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*-_=+;:'&quot,.&lt&gt?`~\(\[\{\)\]\}\|\/]).{8,}"
-        title="Password must have at least 8 characters. Must include at least one uppercase letter, one lowercase letter, and one special character. No spaces."
-        >
+        required>
         <!-- ?=.* means include at least one of whatever specified.-->
         <br>
 
         <label for="confirmP">Confirm Password:</label><br>
         <input type="password" id="confirmP" name="confirmP" placeholder="Confirm password" 
-        requi-red
-        oninput="check(this)">
+        required>
         <br>
 
         <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter email" required
-        pattern="[\w\-.]+@[\w\-.]+\.[a-zA-Z]{2,4}">
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
 
         <button type="signup">Sign Up</button>
 
@@ -72,10 +63,16 @@
       
     </main>
 
+    <div id="message-box">
+      <p id = "message"></p>
+    </div>
+
     <footer>
         <!-- Copyright notice -->
         <p>&copy Copyright 2024 Alikseer</p>
     </footer>
+
+    <script src="javascript.js"></script>
 
 </body>
 </html>
