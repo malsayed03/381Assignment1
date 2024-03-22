@@ -14,46 +14,56 @@
 </head>
 
 <body>
-    <header>
-        <img src="mainlogo.png" alt="logo" height="100">
-        <h1> Alikseer </h1>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="mainlogo.png" alt="logo" height="100">
+        </div>
+        <div class="company-name">
+            <h1> Alikseer </h1>
+        </div>
     </header>
 
-    <div class = "navigation">
-        <!-- Navigation links go here -->
-        <table>
-            <tr>
-                <th><a href= "index.html">Home</a></th>
-                <th><a href= "products.html">Products</a></th>
-                <th><a href= "contact.html">Contact Us</a></th>
-                <th><a href= "login.html">Log In</a></th>
-            </tr>
-
-        </table>
-    </div>
+    <!-- Navigation Section -->
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link">Login</a>
+    </nav>
     
-    <main class = "contact">
-        <h2>Reach Out to Us:</h2>
-        <br>
-        <p>We'd love to hear from you! Whether you have questions, feedback, or just want to
-        say hello, feel free to contact us through any of the channels below:</p>
-        <div class="contact-method">
-            <h3>Email</h3>
-            <p>Email us at: <a href="#">info@email.com</a></p>
-            <h3>Phone</h3>
-            <p>Call us at: +1 (403) 123-1234</p>
-            <h3>Social Media</h3>
-            <p>Connect with us in social media:</p>
-            <a href="twitter.com">Twitter</a><br>
-            <a href="instagram.com">Instagram</a><br>
-            <a href="facebook.com">Facebook</a>
-        </div>
-        <br>
+    <main>
+        <section class = "contact-info">
+            <h2>Reach Out to Us:</h2>
+            <br>
+            <p>We'd love to hear from you! Whether you have questions, feedback, or just want to
+            say hello, feel free to contact us through any of the channels below:</p>
+
+            <div class="contact-method">
+                <h3>Email</h3>
+                <p>Email us at: <a href="#">info@email.com</a></p>
+            </div>
+
+            <div class="contact-method">
+                <h3>Phone</h3>
+                <p>Call us at: +1 (403) 123-1234</p>
+            </div>
+
+            <div class="contact-method">
+                <h3>Social Media</h3>
+                <p>Connect with us on social media:</p>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                </ul>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        <!-- copyright notice -->
-        <p>&copy Copyright 2024 Alikseer</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; Copyright Alikseer All rights reserved.</p>
     </footer>
 
 </body>
