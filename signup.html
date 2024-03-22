@@ -10,70 +10,57 @@
   <meta name="author" content="Zaira Ramji and Maryam Alsayed">
   <link rel="shortcut icon" href="potionfavicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="styles.css">
-  <script src="javascript.js"></script>
+  <script src="signup.js" defer></script>
   <title> Alikseer Sign Up </title>
   
 </head>
-<body id="signupPage">
-    <header>
-        <!-- Logo and website name go here -->
-      	 <img src="mainlogo.png" alt="logo" height="100">
-         <h1> Alikseer </h1>
-    </header>
 
-    <div class = "navigation">
-        <!-- Navigation links go here -->
-        <table>
-          <tr>
-              <th><a href= "index.html">Home</a></th>
-              <th><a href= "products.html">Products</a></th>
-              <th><a href= "contact.html">Contact Us</a></th>
-              <th><a href= "login.html">Log In</a></th>
-          </tr>
+<body>
 
-      </table>
+  <header class = "header">
+    <div class ="logo">
+      <img src="mainlogo.png" alt="logo" height="100">
     </div>
+    <div class = "company-name">
+      <h1> Alikseer </h1>
+    </div>
+  </header>
 
-    <main class="signup" id="signup">
-        <!-- Place for login form, including username, password, & login button (nonfunctional) -->
-        <!-- Password should be masked; also include signup link for new users (nonfunctional hyperlink) -->
-      <form>
+  <nav>
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="products.html" class="nav-link">Products</a>
+    <a href="contact.html" class="nav-link">Contact Us</a>
+    <a href="login.html" class="nav-link">Login</a> 
+  </nav>
 
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" placeholder="Enter username" 
-        required>
-        <br>
+    <main>
 
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" placeholder="Enter password" 
-        required>
-        <!-- ?=.* means include at least one of whatever specified.-->
-        <br>
+        <!-- Signup Form Section -->
+        <section class="signup-form">
+          <form id="signup-form" action="#" method="post">
+              <label for="username">Username:</label>
+              <input type="text" id="username" name="username" required placeholder="Enter username">
 
-        <label for="confirmP">Confirm Password:</label><br>
-        <input type="password" id="confirmP" name="confirmP" placeholder="Confirm password" 
-        required>
-        <br>
+              <label for="password">Password:</label>
+              <input type="password" id="password" name="password" required placeholder="Enter password">
 
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email" placeholder="Enter email" required>
+              <label for="confirm-password">Confirm Password:</label>
+              <input type="password" id="confirm-password" name="confirm-password" required placeholder="Confirm password">
 
-        <button type="signup">Sign Up</button>
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required placeholder="Enter email">
 
-
-      </form>
+              <button type="button" class="signup-btn" onclick="signup()">Signup</button>
+          </form>
+      </section>
       
     </main>
 
-    <div id="message-box-s">
-      <p id = "message-s"></p>
-    </div>
 
-    <footer>
-        <!-- Copyright notice -->
-        <p>&copy Copyright 2024 Alikseer</p>
-    </footer>
-
+  <footer class="footer">
+    <!-- Copyright notice -->
+    <p>&copy; Copyright Alikseer All rights reserved.</p>  
+  </footer>
 
 </body>
 </html>
