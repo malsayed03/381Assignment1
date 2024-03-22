@@ -15,23 +15,27 @@
     <title> Alikseer Home </title>
 
 </head>
-<body>
-    <header>
-        <img src="mainlogo.png" alt="logo" height="100">
-        <h1> Alikseer </h1>
-    </header>
-    <div class = "navigation">
-        <!-- Navigation links go here-->
-        <table>
-            <tr>
-                <th><a href= "index.html">Home</a></th>
-                <th><a href= "products.html">Products</a></th>
-                <th><a href= "contact.html">Contact Us</a></th>
-                <th><a href= "login.html">Log In</a></th>
-            </tr>
 
-        </table>
-    </div>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="logo">
+            <img src="mainlogo.png" alt="logo" height="100">
+        </div>
+        <div class="company-name">
+            <h1> Alikseer </h1>
+        </div>
+    </header>
+
+    <!-- Navigation Section -->
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="products.html" class="nav-link">Products</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="login.html" class="nav-link">Login</a>
+    </nav>
+
+
 
     <main>
         <!-- About Us Section -->
@@ -44,26 +48,43 @@
                 Let us <i>transform</i> your problems into solutions!</p>
             
         </section>
-        <section class = "shop-now">
-            <!-- Shop Now Button (as a link to the Products page)-->
-            <button><a href= "products.html"> Shop Now!</a></button>
 
+        <!-- Shop Now Button -->
+        <section class="shop-now">
+            <a href="products.html"><button class="shop-now-btn">Shop Now!</button></a>
         </section>
 
-        <!-- Customer Reviews/Testimonials Section -->
-        <section class = "customer-reviews">
-            <!-- Add reviews as needed -->
-            <h3>Read Our Reviews:</h3>
-            <p>Daniel Davis: <br>
-            <i>"Alikseers potions are the best of the best! They're priced well, arrive fast, and they work great. Can't recommend them enough!"</i></p>
-            <p>Jennifer Campbell:<br>
-            <i>"The best potion store on the market, hands down. Once I tried these elixirs I couldn't go anywhere else. I can't imagine my life without them!"</i></p>
+
+        <!-- Customer Reviews Section -->
+        <section class="customer-reviews">
+            <h2>Read Our Reviews:</h2>
+
+            <!-- Review 1 -->
+            <div class="review">
+                <p>
+					<span class="customer-name">Mark Markson</span>
+                    "Alikseers potions are the best of the best! They're priced well, arrive fast, and they work great. Can't recommend them enough!"
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="review">
+                <p>
+					<span class="customer-name">Eliza Elizine</span>
+                    "The best potion store on the market, hands down. Once I tried these elixirs I couldn't go anywhere else. I can't imagine my life without them!"
+                    <p class="rating">⭐⭐⭐⭐⭐</p>
+                </p>
+            </div>
+
+            <!-- Add more reviews as needed -->
         </section>
+
     </main>
 
-    <footer>
-        <!-- Copyright notice goes here -->
-        <p>&copy Copyright 2024 Alikseer</p>
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; Copyright Alikseer All rights reserved.</p>
     </footer>
 </body>
 </html>
